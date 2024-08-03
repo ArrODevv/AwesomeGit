@@ -2,7 +2,16 @@
 name = "awesome_git"
 version = "0.0.1"
 edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+description = "A git CLI clone using the git API."
+authors = [ "ArrODevv" ]
+readme = "CRATES-IO.md"
+license = "MIT"
+repository = "https://github.com/ArrODevv/AwesomeGit"
+keywords = [ "cli", "git" ]
+categories = ["command-line-utilities"]
 
 [dependencies]
+clap = { version = "4.5.13", features = ["unicode", "cargo", "color", "suggestions", "env", "wrap_help"] }
+git2 = "0.19.0"
+tokio = { version = "1.37", features = ["full"] }
+tokio-macros = "*"
